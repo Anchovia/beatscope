@@ -1,0 +1,85 @@
+name: 오류 제보
+description: 사용 중 발생한 오류를 제보해 주세요.
+title: "[오류] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        같은 내용의 [이슈](https://github.com/Anchovia/beatscope/issues?q=is%3Aissue)가 있는지 먼저 확인해 주세요.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 오류 내용
+      description: 어떤 오류가 발생했는지 설명해 주세요.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 재현 방법
+      description: 오류가 발생하는 과정을 순서대로 적어 주세요.
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 예상한 동작
+      description: 정상적으로 동작했을 때의 결과를 적어 주세요.
+    validations:
+      required: false
+
+  - type: input
+    id: version
+    attributes:
+      label: Beatscope 버전
+      description: 설정 > 정보에서 확인할 수 있습니다.
+      placeholder: v0.1.0
+    validations:
+      required: true
+
+  - type: input
+    id: windows
+    attributes:
+      label: Windows 버전
+      description: Windows 설정 > 시스템 > 정보에서 확인할 수 있습니다.
+      placeholder: Windows 11 24H2
+    validations:
+      required: true
+
+  - type: textarea
+    id: chart
+    attributes:
+      label: 악곡 · 버튼 모드 · 난이도
+      description: 악곡 인식이나 판정 분석 오류인 경우 작성해 주세요.
+      placeholder: |
+        악곡명:
+        버튼 모드:
+        난이도:
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 추가 정보
+      description: 관련 설정이나 시도해 본 해결 방법이 있다면 적어 주세요.
+    validations:
+      required: false
+
+  - type: textarea
+    id: attachments
+    attributes:
+      label: 스크린샷 및 진단 정보
+      description: |
+        오류 화면이나 진단 파일이 있다면 첨부해 주세요.
+        진단 파일은 설정 > 정보 > 문제 해결에서 저장할 수 있습니다.
+        첨부 전에 개인정보가 포함되어 있는지 확인해 주세요.
+    validations:
+      required: false
